@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameram Shitty List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Подключение шрифта -->
+    <style>
+        body {
+            background: url('https://i.ytimg.com/vi/qJJK5xNyMtw/maxresdefault.jpg') no-repeat center center fixed; /* Замените на вашу ссылку */
+            background-size: cover;
+            font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto */
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-family: 'Roboto', sans-serif; /* Используем шрифт Roboto для кнопки */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        #levelList {
+            margin-top: 20px;
+            display: none; /* Изначально скрыт */
+        }
+
+        ul {
+            list-style-type: none; /* Убираем маркеры списка */
+            padding: 0; /* Убираем отступы */
+        }
+
+        li {
+            margin: 5px 0; /* Добавляем отступы между элементами списка */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Gameram</h1>
+        <p>Shitty list</p>
+
+        <button class="button" onclick="toggleLevelList()">Показать все уровни</button>
+        
+        <div id="levelList">
+            <ul>
+                <li>Уровень 1: verified by sigma, 100 p., Victors.</li>
+                <li>Уровень 2: Тайны Заброшенного Замка</li>
+                <li>Уровень 3: Пески Времени</li>
+                <li>Уровень 4: Ледяная Цитадель</li>
+                <li>Уровень 5: Глубины Океана</li>
+                <li>Уровень 6: Затерянный Город</li>
+                <li>Уровень 7: Темные Подземелья</li>
+                <li>Уровень 8: Портал Времени</li>
+                <li>Уровень 9: Вулканические Земли</li>
+                <li>Уровень 10: Битва С Судьбой</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleLevelList() {
+            const levelList = document.getElementById('levelList');
+            if (levelList.style.display === 'none') {
+                levelList.style.display = 'block'; // Показываем список уровней
+            } else {
+                levelList.style.display = 'none'; // Скрываем список уровней
+            }
+        }
+
+        console.log('Страница загружена и готова к использованию!');
+    </script>
+</body>
+</html>

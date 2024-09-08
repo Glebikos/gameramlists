@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100..900&display=swap');
+
+* {
+    margin: 0; /* Исправлено: "morgin" на "margin" */
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 85vh;
+    background-color: #f4a261;
+    color: #fff;
+    display: flex; /* Добавлено для центрирования контента */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.content {
+    text-align: center;
+}
+
+.main img {
+    width: 300px;
+    height: 300px;
+}
+
+.main h1 {
+    font-size: 45px; /* Исправлено: удалён лишний блок */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.main {
+    text-align: center;
+    margin-top: 20px; /* Уменьшили отступ сверху */
+}
+
+.content {
+    margin-top: 20px; /* Уменьшили отступ сверху для кнопки */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #007BFF; /* Цвет кнопки */
+    border: none;
+    border-radius: 5px; /* Скругление углов */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.button:hover {
+    background-color: #0056b3; /* Цвет при наведении */
+}
