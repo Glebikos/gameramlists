@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            transition: background-color 0.3s;
         }
         .container {
             background-color: #fff;
@@ -21,6 +22,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            transition: background-color 0.3s, color 0.3s;
         }
         h2 {
             text-align: center;
@@ -61,9 +63,43 @@
             font-size: 14px;
             color: #666;
         }
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        /* Темная тема */
+        body.dark {
+            background-color: #1a1a1a;
+        }
+        body.dark .container {
+            background-color: #333;
+            color: #fff;
+        }
+        body.dark h2 {
+            color: #fff;
+        }
+        body.dark input {
+            background-color: #444;
+            color: #fff;
+            border: 1px solid #666;
+        }
+        body.dark input:focus {
+            border-color: #007bff;
+        }
+        body.dark button {
+            background-color: #0056b3;
+        }
+        body.dark button:hover {
+            background-color: #007bff;
+        }
     </style>
 </head>
 <body>
+
+    <div class="theme-toggle" id="themeToggle">🌙</div>
 
     <div class="container">
         <h2>Регистрация</h2>
@@ -86,6 +122,14 @@
             <p>© 2023 Ваша компания</p>
         </div>
     </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+        });
+    </script>
 
 </body>
 </html>
