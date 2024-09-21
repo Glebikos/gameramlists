@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Подключение к базе данных
-    $servername = "localhost"; // или ваш сервер
+    $servername = "f1.aurorix.net"; // ваш сервер
     $username = "u60558_4lq4mC8rmS";
     $passwordDB = "89C4i60x2h^Jkxgnn.GUwYsO";
     $dbname = "s60558_glebikobase"; // замените на имя вашей базы данных
